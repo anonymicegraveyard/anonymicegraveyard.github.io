@@ -13,7 +13,9 @@ function getKeyAndMove(e) {
     switch (key_code) {
         case 32:
             var img = document.createElement('img');
-            img.src = 'https://raw.githubusercontent.com/saintmaxi/anonymice/main/rose.png';
+            img.src = 'https://raw.githubusercontent.com/saintmaxi/anonymice/main/cheese.png';
+            img.style.height = "150px"
+            img.style.width = "150px;"
             img.style.position = "absolute";
             img.style.left = objImage.style.left;
             img.style.top = parseInt(objImage.style.top) + 35 + "px";
