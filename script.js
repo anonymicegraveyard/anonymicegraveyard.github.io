@@ -17,7 +17,7 @@ function getKeyAndMove(e) {
             img.style.height = "150px"
             img.style.width = "150px;"
             img.style.position = "absolute";
-            img.style.left = objImage.style.left;
+            img.style.left = parseInt(objImage.style.left) +50 + "px";
             img.style.top = parseInt(objImage.style.top) + 35 + "px";
             document.getElementById('graves').appendChild(img);
             break;
