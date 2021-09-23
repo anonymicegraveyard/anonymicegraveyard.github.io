@@ -3,7 +3,7 @@
     src: URL('pixelfont.ttf') format('truetype');
   }
 
-  * {
+ * {
     font-family: 'Pixel Font';
     font-style: normal;
     font-weight: 300;
@@ -29,25 +29,21 @@ button {
 }
 
 button:hover{
-    /* color:#000000; */
     background-color:#FFFFFF
 }
 
 .inline-block {
     display: inline-block;
     white-space: nowrap;
-    /* position: absolute; */
 }
 #graves {
     white-space: nowrap;
-    /* z-index: 3; */
-    /* overflow: scroll; */
 }
 
 #graves p {
     position: relative;
     top: 185;
-    left: 229;
+    left: 220;
     font-size:1.4vw;
     z-index: 0;
 }
