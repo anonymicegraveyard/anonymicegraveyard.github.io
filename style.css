@@ -43,6 +43,15 @@ button:hover{
     /* z-index: 3; */
     /* overflow: scroll; */
 }
+
+#graves p {
+    position: relative;
+    top: 185;
+    left: 229;
+    font-size:1.7vw;
+    z-index: 0;
+}
+
 html {
     background-image: url("https://c4.wallpaperflare.com/wallpaper/848/877/189/8-bit-artwork-sky-landscape-wallpaper-preview.jpg");
     background-repeat: repeat-x;

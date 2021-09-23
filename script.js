@@ -75,8 +75,15 @@ function loadChain(requested_id, random=false) {
                 requested_id = keys[Math.floor(Math.random() * max)];
             }
             let ids = data[requested_id];
+            let lownum = '';
             for (const id of ids.slice(0,-1)) {
-                $('#graves').append( `<div class="inline-block"><img class="mouse" src="https://raw.githubusercontent.com/jozanza/anonymice-images/main/${id}.png"><img src="https://raw.githubusercontent.com/saintmaxi/anonymice/main/gravestone.png">
+                if (id<100) {
+                    lownum = '&nbsp&nbsp&nbsp'
+                }
+                else {
+                    lownum = '';
+                }
+                $('#graves').append( `<div class="inline-block"><p>${lownum}#&nbsp${id}</p><img class="mouse" src="https://raw.githubusercontent.com/jozanza/anonymice-images/main/${id}.png"><img src="https://raw.githubusercontent.com/saintmaxi/anonymice/main/gravestone.png">
             </div>`);
             }
         }
