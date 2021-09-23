@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Pixel Font';
+    src: URL('pixelfont.ttf') format('truetype');
+  }
+
+  * {
+    font-family: 'Pixel Font';
+    font-style: normal;
+    font-weight: 300;
+  }
+
+#importantstuff {
+    position: fixed;
+}
+
+input {
+    width:20vw;
+}
+
+.directions {
+    border: .2em solid black;
+    font-size:2.3vw;
+    text-align:center;
+}
+
+button {
+    transition: all 0.2s;
+
+}
+
+button:hover{
+    /* color:#000000; */
+    background-color:#FFFFFF
+}
+
+.inline-block {
+    display: inline-block;
+    white-space: nowrap;
+    /* position: absolute; */
+}
+#graves {
+    white-space: nowrap;
+    /* z-index: 3; */
+    /* overflow: scroll; */
+}
+html {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/848/877/189/8-bit-artwork-sky-landscape-wallpaper-preview.jpg");
+    background-repeat: repeat-x;
+    background-color: #7EAC71;
+}
+.mouse {
+    position: relative;
+    top: -128;
+    left: 210;
+    width: 120px;
+}

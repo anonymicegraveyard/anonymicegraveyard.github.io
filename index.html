@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Anonymice Graveyard</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="https://raw.githubusercontent.com/saintmaxi/anonymice/main/gravestone.png">
+    </head>
+    <body onkeydown="getKeyAndMove(event)">
+        <div id="importantstuff">
+            <input class=directions type="text" id="miceID" name="id" placeholder="Enter ID #">
+            <button class=directions id="go" type=button onclick="loadChain(document.getElementById('miceID').value)">GO</button>
+            <button class=directions id="rand" type=button onclick="loadChain(document.getElementById('miceID').value, true)">RANDOM</button>
+            <button class=directions id="select" type=button onclick="selectMouse()">SELECT MOUSE</button>
+            <button class=directions id="controls" type=button onclick="showControls()">CONTROLS</button>
+            <button class=directions id="help" type=button onclick="showHelp()">HELP</button>
+        </div>
+        <div id="graves">
+        </div>
+        <img id="myMouse" src="https://raw.githubusercontent.com/jozanza/anonymice-images/main/1681.png" alt="includehelp.com" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+    </body>
+</html>
