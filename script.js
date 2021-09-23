@@ -87,7 +87,7 @@ function loadChain(requested_id, random=false) {
 }
 
 function showControls () {
-    window.alert("<- : Move Left\n-> : Move Right\n Spacebar : Surprise :)")
+    window.alert("<- : Move Left\n-> : Move Right\n Spacebar : Surprise :)\nMOVEMENT NOT YET MOBILE COMPATIBLE")
 }
 
 function showHelp () {
