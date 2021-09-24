@@ -86,7 +86,7 @@ function loadChain(requested_id, random=false) {
                 else {
                     lownum = '';
                 }
-                $('#graves').append( `<div class="inline-block"><p>${lownum}#&nbsp${id}</p><img class="mouse" src="https://raw.githubusercontent.com/jozanza/anonymice-images/main/${id}.png"><img src="https://raw.githubusercontent.com/saintmaxi/anonymice/main/gravestone.png">
+                $('#graves').append( `<div class="inline-block"><p>${lownum}#&nbsp${id}</p><img class="mouse" src="https://raw.githubusercontent.com/jozanza/anonymice-images/main/${id}.png"><img src="gravestone.png">
             </div>`);
             }
         }
