@@ -44,9 +44,16 @@ button:hover{
     position: relative;
     top: 185;
     left: 220;
-    font-size:1.4vw;
+    font-size:20px;
     z-index: 0;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #graves p{
+        font-size: 1.4vw;
+    }
+  }
 
 html {
     background-image: url("https://c4.wallpaperflare.com/wallpaper/848/877/189/8-bit-artwork-sky-landscape-wallpaper-preview.jpg");
