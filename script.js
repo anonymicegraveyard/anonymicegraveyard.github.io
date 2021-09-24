@@ -49,19 +49,19 @@ function getKeyAndMove(e) {
 }
 
 function moveLeft() {
-    objImage.style.left = parseInt(objImage.style.left) - 55 + "px";
+    objImage.style.left = parseInt(objImage.style.left) - 40 + "px";
 }
 
 function moveUp() {
-    objImage.style.top = parseInt(objImage.style.top) - 55 + "px";
+    objImage.style.top = parseInt(objImage.style.top) - 40 + "px";
 }
 
 function moveRight() {
-    objImage.style.left = parseInt(objImage.style.left) + 55 + "px";
+    objImage.style.left = parseInt(objImage.style.left) + 40 + "px";
 }
 
 function moveDown() {
-    objImage.style.top = parseInt(objImage.style.top) + 55 + "px";
+    objImage.style.top = parseInt(objImage.style.top) + 40 + "px";
 }
 
 window.onload = init;
@@ -78,6 +78,7 @@ function loadChain(requested_id, random=false) {
             }
             let ids = data[requested_id];
             let lownum = '';
+            $('#miceID').val(requested_id);
             for (const id of ids.slice(0,-1)) {
                 if (id<100) {
                     lownum = '&nbsp&nbsp&nbsp'
