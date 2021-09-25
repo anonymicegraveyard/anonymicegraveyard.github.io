@@ -25,6 +25,7 @@
 //end scrolling stuff
 
 let windowwidth = $(window).width();
+let windowheight = $(window).height();
 let shifting = false;
 let facingRight = true;
 
@@ -80,7 +81,9 @@ function getKeyAndMove(e) {
             moveRight();
             break;
         case 40: //down arrow key
-            moveDown();
+            if (objImage.getBoundingClientRect().bottom <=  windowheight- 15) {
+                moveDown();
+            }
             break;
     }
 }
