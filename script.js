@@ -1,17 +1,48 @@
 //Movement code adapted from https://www.includehelp.com/code-snippets/move-object-with-arrow-keys-using-javascript-function.aspx   
-  
+
+//stuff to control scrolling
+
+ var winX = null;
+ var winY = null;
+
+ window.addEventListener('scroll', function () {
+     if (winX !== null && winY !== null) {
+         window.scrollTo(winX, winY);
+     }
+ });
+ 
+ function disableScroll() {
+     winX = window.scrollX;
+     winY = window.scrollY;
+ }
+ 
+ function enableScroll() {
+     winX = null;
+     winY = null;
+ }
+
+ disableScroll()
+//end scrolling stuff
+
+let windowwidth = $(window).width();
+let shifting = false;
+let facingRight = true;
+
 var objImage = null;
 function init() {
     objImage = document.getElementById("myMouse");
     objImage.style.position = "absolute";
-    objImage.style.left = "350px";
-    objImage.style.top = "260px";
+    objImage.style.left = "40px";
+    objImage.style.top = "300px";
 }
-let facingRight = true;
+
 function getKeyAndMove(e) {
+    if (shifting) {
+        return
+    }
     var key_code = e.which || e.keyCode;
     switch (key_code) {
-        case 32:
+        case 32: //spacebar
             var img = document.createElement('img');
             img.src = 'https://raw.githubusercontent.com/saintmaxi/anonymice/main/cheese.png';
             img.style.height = "150px"
@@ -27,6 +58,9 @@ function getKeyAndMove(e) {
                 facingRight = false;
             }
             if (parseInt(objImage.style.left) > 0) {
+                if (objImage.getBoundingClientRect().left -200 < 0) {
+                    scroll('left')
+                }
                 moveLeft();
             }
             break;
@@ -40,11 +74,30 @@ function getKeyAndMove(e) {
                 objImage.style.transform = "scaleX(1)";
                 facingRight = true;
             }
+            if (objImage.getBoundingClientRect().right + 200 > windowwidth) {
+                scroll('right')
+            }
             moveRight();
             break;
         case 40: //down arrow key
             moveDown();
             break;
+    }
+}
+
+function scroll(direction){
+    shifting=true;
+    enableScroll()
+    if (direction == 'right') {
+        $('body').animate({ 'scrollLeft': '-=-'+.65*windowwidth+'px' }, 400, function() {
+            disableScroll()
+            shifting=false;
+        })
+    } else if (direction == 'left') {
+        $('body').animate({ 'scrollLeft': '-='+.65*windowwidth+'px' }, 400, function() {
+            disableScroll()
+            shifting=false;
+        })
     }
 }
 
