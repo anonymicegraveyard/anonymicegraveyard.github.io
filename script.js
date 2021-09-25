@@ -1,4 +1,4 @@
-//Movement code adapted from https://www.includehelp.com/code-snippets/move-object-with-arrow-keys-using-javascript-function.aspx   
+//Movement code adapted from https://www.includehelp.com/code-snippets/move-object-with-arrow-keys-using-javascript-function.aspx    
 
 //stuff to control scrolling
 
