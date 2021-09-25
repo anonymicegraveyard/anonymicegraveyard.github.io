@@ -58,7 +58,7 @@ function getKeyAndMove(e) {
                 facingRight = false;
             }
             if (parseInt(objImage.style.left) > 0) {
-                if (objImage.getBoundingClientRect().left -200 < 0) {
+                if (objImage.getBoundingClientRect().left -75 < 0) {
                     scroll('left')
                 }
                 moveLeft();
@@ -74,7 +74,7 @@ function getKeyAndMove(e) {
                 objImage.style.transform = "scaleX(1)";
                 facingRight = true;
             }
-            if (objImage.getBoundingClientRect().right + 200 > windowwidth) {
+            if (objImage.getBoundingClientRect().right + 75 > windowwidth) {
                 scroll('right')
             }
             moveRight();
