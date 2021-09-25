@@ -69,7 +69,7 @@ function getKeyAndMove(e) {
                 moveUp();
             }
             break;
-        case 39: //right arrow key
+        case 39: //right arrow key 
             if (!facingRight) {
                 objImage.style.transform = "scaleX(1)";
                 facingRight = true;
