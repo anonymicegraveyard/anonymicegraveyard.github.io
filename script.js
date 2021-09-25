@@ -51,6 +51,12 @@ function getKeyAndMove(e) {
             img.style.position = "absolute";
             img.style.left = parseInt(objImage.style.left) +50 + "px";
             img.style.top = parseInt(objImage.style.top) + 75 + "px";
+            if (facingRight) {
+                img.style.transform = "scaleX(1)";
+            }
+            else {
+                img.style.transform = "scaleX(-1)";
+            }
             document.getElementById('graves').appendChild(img);
             break;
         case 37: //left arrow key
