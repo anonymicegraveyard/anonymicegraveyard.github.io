@@ -44,7 +44,7 @@ function getKeyAndMove(e) {
     switch (key_code) {
         case 32: //spacebar
             var img = document.createElement('img');
-            img.src = 'https://raw.githubusercontent.com/saintmaxi/anonymice/main/cheese.png';
+            img.src = 'cheese.png';
             img.style.height = "150px"
             img.style.width = "150px;"
             img.style.position = "absolute";
